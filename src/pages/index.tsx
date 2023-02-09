@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Home - Bicpema</title>
       </Head>
       <Layout fullPage>
         <Text h1>Bicpema</Text>
@@ -19,11 +19,11 @@ export default function Home() {
           An open source design system for building modern websites and
           applications.
         </Text>
-        <Box maxW="900px" w="100%">
+        <Box>
           <Grid.Container gap={2} justify="center">
             <Grid sm={24} md={8}>
               <TopPageCard
-                href="/"
+                href="/simulations"
                 title="Simulation"
                 comment="Ever-increasing list of concise and aesthetic components."
                 icon={<Display size={15} />}

@@ -1,10 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { Divider } from "@geist-ui/core";
+import { Divider, useTheme } from "@geist-ui/core";
 import { Github } from "@geist-ui/icons";
 
 export const NavigationBar = () => {
+  const { palette } = useTheme();
   return (
-    <Box w="100%" position="fixed" zIndex="10">
+    <Box w="100%" bg={palette.background} position="fixed" zIndex="10">
       <Flex justifyContent="center">
         <Flex
           maxW="1000px"

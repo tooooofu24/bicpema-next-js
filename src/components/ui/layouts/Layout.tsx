@@ -13,7 +13,9 @@ export const Layout: FC<props> = ({ children, fullPage }) => {
       <>
         <NavigationBar />
         <FullPageLayout>
-          <Box as="main">{children}</Box>
+          <Box as="main" maxW="900px" w="100%">
+            {children}
+          </Box>
         </FullPageLayout>
       </>
     );
@@ -21,9 +23,11 @@ export const Layout: FC<props> = ({ children, fullPage }) => {
     return (
       <>
         <NavigationBar />
-        <Box pt="5rem">
-          <main>{children}</main>
-        </Box>
+        <Flex pt="5rem" justifyContent="center">
+          <Box as="main" maxW="900px" w="100%" pt="2rem">
+            {children}
+          </Box>
+        </Flex>
       </>
     );
   }
