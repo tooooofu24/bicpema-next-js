@@ -14,7 +14,7 @@
     "@emotion/styled": "^11.10.5",
     "@geist-ui/core": "^2.3.8",
     "@geist-ui/icons": "^1.0.2",
-    "@next/font": "13.1.5",
+    "@next/font": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
