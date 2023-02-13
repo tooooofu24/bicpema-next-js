@@ -5,13 +5,13 @@ import Link from "next/link";
 
 import { Layout } from "@/components/ui/layouts/Layout";
 import { ListItem } from "@/components/ui/parts/ListItem";
-import { Simulation } from "@/types/Simulation";
+import { Article } from "@/types/Article";
 import { client } from "@/utils/client";
 
 type props = {
-  simulations: Simulation[];
+  articles: Article[];
 };
-const Home: NextPage<props> = ({ simulations }) => {
+const Home: NextPage<props> = ({ articles }) => {
   return (
     <>
       <Head>
@@ -20,19 +20,20 @@ const Home: NextPage<props> = ({ simulations }) => {
       <Layout>
         <Breadcrumbs>
           <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
-          <Breadcrumbs.Item>Simulations</Breadcrumbs.Item>
+          <Breadcrumbs.Item>Articles</Breadcrumbs.Item>
         </Breadcrumbs>
         <Spacer h={2} />
         <Grid.Container gap={2}>
-          {simulations.map((simulation) => (
-            <Grid key={simulation.id} sm={24} md={12} lg={8}>
+          {articles.map((article) => (
+            <Grid key={article.id} sm={24} md={12} lg={8}>
               <Link
-                href={`simulations/${simulation.id}`}
+                href={article.url}
+                target="_blank"
                 style={{ width: "100%" }}
               >
                 <ListItem
-                  title={simulation.title}
-                  thumbnailUrl={simulation.thumbnailUrl}
+                  title={article.title}
+                  thumbnailUrl={article.thumbnailUrl}
                 />
               </Link>
             </Grid>
@@ -44,11 +45,11 @@ const Home: NextPage<props> = ({ simulations }) => {
 };
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "simulations" });
+  const data = await client.get({ endpoint: "articles" });
 
   return {
     props: {
-      simulations: data.contents,
+      articles: data.contents,
     },
   };
 };

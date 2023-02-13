@@ -31,7 +31,7 @@ export default function Home() {
             </Grid>
             <Grid sm={24} md={8}>
               <TopPageCard
-                href="/"
+                href="/articles"
                 title="Articles"
                 comment="Configure sizes, colors, appearances, shapes, and more."
                 icon={<FileText size={15} />}

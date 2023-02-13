@@ -5,7 +5,7 @@ export type Simulation = {
   title: string;
   categories: Category[];
   url: string;
-  thumbnailUrl?: string;
+  thumbnailUrl: string;
   shareLinkUrl?: string;
   description?: string;
 };
