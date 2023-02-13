@@ -3,7 +3,7 @@ import { Grid, Text, useTheme } from "@geist-ui/core";
 import { Display, FileText, Mail } from "@geist-ui/icons";
 import Head from "next/head";
 
-import { TopPageCard } from "@/components/feature/top/TopPageCard";
+import { TopPageCard } from "@/components/ui/feature/top/TopPageCard";
 import { Layout } from "@/components/ui/layouts/Layout";
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
             </Grid>
             <Grid sm={24} md={8}>
               <TopPageCard
-                href="/"
+                href="/contact"
                 title="Contact"
                 comment="Geist is open sourced and available free under MIT license."
                 icon={<Mail size={15} />}
