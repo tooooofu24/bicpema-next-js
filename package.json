@@ -13,7 +13,7 @@
     "format": "npm run eslint:fix && npm run prettier:fix"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.4.9",
+    "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@geist-ui/core": "^2.3.8",
